@@ -1,0 +1,119 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/reset";
+
+
+html {
+  height: auto;
+  min-height: 100vh;
+  width: 100%;
+  margin: auto;
+  background: linear-gradient(180deg, rgb(61, 23, 104) 0%, rgba(61, 23, 104, 0) 100%), #1A082C;	 
+  font-family: $mainFont;
+  color: $mainFontColor;  
+  font-size: $mainFontSize;
+  line-height: $mainLineHeight; 
+
+  @media screen and (max-width: $desktopWidth) {
+    font-size: 2vw;
+    line-height: 3vw;
+  }
+  @media screen and (max-width: $desktopAdaptiveWidth) {
+    
+  }
+  @media screen and (max-width: $smDesktopWidth) {
+    
+  }
+  @media screen and (max-width: $tableWidth) {
+    font-size: 4.4vw;
+    line-height: 6vw;
+    height: auto;
+    position: relative;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    
+  }
+  @media screen and (max-width: $smPhoneWidth) {
+    
+  }
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  height: auto;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1920px;
+  overflow-x: hidden;
+  background: linear-gradient(180deg, rgb(61, 23, 104) 0%, rgba(61, 23, 104, 0) 100%), #1A082C;	
+  @media screen and (max-width: $tableWidth) {    
+    height: auto;  
+    display: block;  
+  }
+}
+
+
+
+.app{
+    width: 100%;
+    max-width: 1920px;      
+    margin: 0 auto;
+    height: auto;
+    // height: 100%;    
+    min-height: 900px;    
+
+  @media screen and (max-width: $tableWidth) {    
+    height: auto;
+    margin: 0;
+    min-height: auto;
+  }
+
+  &__transition{
+    height: 100%;
+    width: 100%;   
+    display: block;
+    @media screen and (max-width: $tableWidth) {    
+      height: auto;
+    } 
+  }
+}
+
+#app{
+  display: none;
+}
+
+#loader{
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+
+  svg{
+    width: 15%;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.5;
+    @media screen and (max-width: $tableWidth) {  
+      width: 25%;
+    }
+  }
+}
+
+
+// Modules
+@import "modules/home.scss";
+@import "modules/final.scss";
+@import "modules/friend.scss";
+@import "modules/who.scss";
+@import "modules/name.scss";
+@import "modules/goto.scss";

@@ -1,0 +1,114 @@
+@import "utils/vars";
+
+.goto{   
+    height: auto;    
+    margin: 5% 3% 5% 5%; 
+
+    @media screen and (max-width: $tableWidth) {
+        margin: 0 0 5% 0;
+    }
+    
+    &__title{
+        font-family: $mainFontBold;
+
+        @media screen and (max-width: $tableWidth) {
+            font-size: 1.5em;
+            margin-left: 2.5%;
+        }
+    }
+
+    &__items{
+        display: flex;
+        flex-direction: column;
+        margin-top: 3%;    
+         
+
+        &__item{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1%;
+            cursor: pointer;
+            padding-right: 2%;
+
+            @media screen and (max-width: $tableWidth) {
+                margin: 2.5% 2.5%;
+                padding-right: 0;
+            }
+
+            &:hover{
+                background: rgba(255,255,255,0.2);
+                border-radius: 1em;
+            }
+            
+    
+            &-block{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 80%;
+                @media screen and (max-width: $tableWidth) {
+                    width: 100%;
+                    background: #C23172;
+                    opacity: 0.9;
+                    border-radius: 1em;
+                }
+
+                &-img{
+                    object-fit: contain;
+                    height: auto;
+                    width: 20%;
+
+                    @media screen and (max-width: $tableWidth) {
+                        display: none;
+                    }
+
+                    &-mob{
+                        object-fit: contain;
+                        height: auto;
+                        min-height: 10vh;
+                        width: 20%;
+                        display: none;
+                        margin-left: 5%;
+
+                        @media screen and (max-width: $tableWidth) {
+                            display: block;
+                        }
+                    }
+                }
+
+                &-txt{
+                    margin-left: 5%;
+
+                    &-title{
+                        font-family: $mainFontBold;                        
+                    }
+        
+                    &-desc{
+                        font-family: $mainFont;
+                        font-size: 0.7em;
+                    }
+                }
+            }
+    
+            &-arrow{
+                width: 20%;
+                display: flex;
+                justify-content: flex-end;
+                @media screen and (max-width: $tableWidth) {
+                    display: none;
+                }
+
+                &-img{
+                    object-fit: contain;
+                    width: 25%;
+                    height: auto;
+                }   
+            }
+
+        }
+        
+    }
+    
+}
